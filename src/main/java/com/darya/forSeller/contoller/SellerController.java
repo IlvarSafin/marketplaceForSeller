@@ -67,6 +67,8 @@ public class SellerController {
             return "redirect:/addProduct";
         }
 
+        product.setStatus(false);
+
         productService.save(product, getCurrentSeller(), file1, file2, file3);
         return "redirect:/";
     }
